@@ -1,8 +1,10 @@
+/*
+Film Bilgi Bankasi: http://www.omdbapi.com/ sitesinin api sinden faydalanarak 
+verilerimizi 3002 portuna cektim ve oradan 3000 prtunda kullandim.
+*/
 import React from 'react';
 import MovieList from './components/MovieList';
 import SearchBar from './components/SearchBar';
-
-
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -25,8 +27,7 @@ class App extends React.Component {
     // SEARCH MOVIE
     searchMovie = (event) => {
         this.setState({ searchQuery: event.target.value })
-    }  
-       
+    }         
 
     render() {
 
@@ -53,21 +54,14 @@ class App extends React.Component {
                                         <SearchBar searchMovieProp={this.searchMovie} />
                                     </div>
                                 </div>
-
-
                                 <MovieList
-                                    movies={filteredMovies}
-                                   
+                                    movies={filteredMovies}                                 
 
                                 />
                             </React.Fragment>
                         )}>
 
-                        </Route>
-
-                       
-
-                       
+                        </Route>                          
 
                     </Switch>
                 </div>
@@ -76,7 +70,6 @@ class App extends React.Component {
         )
 
     }
-
 
 }
 

@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 
 const MovieList = (props) => {
 
-
-
     const truncateOverview = (string, maxLength) => {
         if (!string) return null;
         if (string.length <= maxLength ) return string;
@@ -28,7 +26,6 @@ const MovieList = (props) => {
                                 <Link type="button"
                                 className="btn btn-md btn-outline-primary"                   
                                 >Edit </Link>
-
 
                                     <h2><span className="badge badge-info">{movie.rating}</span></h2>
                                 </div>
